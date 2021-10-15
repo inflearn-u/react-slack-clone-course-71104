@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true, // import * as React from 'react' => import React from 'react'
+      "sourceMap": true, // 에러난 위치 찾아가기 편함
+      "lib": ["ES2020", "DOM"], // 최신문법
+      "jsx": "react", // jsx 가 리액트 꺼라고 지정
+      "module": "esnext", // 최신모듈
+      "moduleResolution": "Node",
+      "target": "es5",
+      "strict": true, // typescript 할때는 무조건 true.. any쓰는건 좋지않다. 그럴거면 typescript 쓰는 의미가 없다.
+      "resolveJsonModule": true,
+      "baseUrl": ".",
+      "paths": {
+        "@hooks/*": ["hooks/*"], // import A from ../../../hello.js -> @src/hello.js 절대경로처럼 사용가능 
+        "@components/*": ["components/*"],
+        "@layouts/*": ["layouts/*"],
+        "@pages/*": ["pages/*"],
+        "@utils/*": ["utils/*"],
+        "@typings/*": ["typings/*"]
+      }
+    }
+  }
+  
